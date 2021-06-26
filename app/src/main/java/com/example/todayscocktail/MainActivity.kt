@@ -15,23 +15,23 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var drinkName: TextView
-    private lateinit var drinkContainer: ConstraintLayout
-    private lateinit var drinkImage: ImageView
+//    private lateinit var drinkName: TextView
+//    private lateinit var drinkContainer: ConstraintLayout
+//    private lateinit var drinkImage: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        drinkName = findViewById(R.id.drinkName)
-        drinkContainer = findViewById(R.id.drinkContainer)
-        drinkImage = findViewById(R.id.drinkImage)
-
-        getDrink()
-
-        drinkContainer.setOnClickListener {
-            getDrink()
-        }
+//        drinkName = findViewById(R.id.drinkName)
+//        drinkContainer = findViewById(R.id.drinkContainer)
+//        drinkImage = findViewById(R.id.drinkImage)
+//
+//        getDrink()
+//
+//        drinkContainer.setOnClickListener {
+//            getDrink()
+//        }
     }
 
     private fun getDrink() {
@@ -42,10 +42,10 @@ class MainActivity : AppCompatActivity() {
             try {
                 val response = requestDrinks()
                 val drink = response.drinksList.random()
-                drinkName.text = drink.strDrink
-                Glide.with(this@MainActivity)
-                     .load(drink.strDrinkThumb)
-                     .into(drinkImage)
+//                drinkName.text = drink.strDrink
+//                Glide.with(this@MainActivity)
+//                     .load(drink.strDrinkThumb)
+//                     .into(drinkImage)
             } catch (e: Exception) {
                 Toast.makeText(this@MainActivity, e.message, Toast.LENGTH_LONG).show()
             }
