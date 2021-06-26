@@ -1,4 +1,4 @@
-package com.example.todayscocktail
+package com.example.todayscocktail.view
 
 import android.content.Intent
 import android.os.Bundle
